@@ -1,0 +1,13 @@
+# .gitignore
+build/
+dist/
+packages/
+node_modules/
+.DS_Store
+*.py.swp
+*.pyc
+.idea
+*.spec
+.venv
+# Ignore uploaded_files
+uploaded_files/

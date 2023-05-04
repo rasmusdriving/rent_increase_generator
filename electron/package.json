@@ -1,0 +1,45 @@
+{
+    "name": "rent-increase-generator",
+    "version": "1.0.0",
+    "description": "An Electron app to generate rent increase documents",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-builder"
+    },
+    "author": "rasmus driving",
+    "license": "MIT",
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "electron": "^15.3.2",
+        "electron-updater": "^4.6.2",
+        "flask": "*"
+    },
+    "devDependencies": {
+        "electron-builder": "^22.14.5"
+    },
+    "build": {
+        "appId": "com.example.rent-increase-generator",
+        "productName": "Rent Increase Generator",
+        "directories": {
+            "output": "build"
+        },
+        "files": [
+            "main.js",
+            "preload.js"
+        ],
+        "mac": {
+            "category": "public.app-category.productivity",
+            "target": "dmg"
+        },
+        "win": {
+            "target": "nsis"
+        },
+        "publish": [
+            {
+                "provider": "github",
+                "private": true
+            }
+        ]
+    }
+}
